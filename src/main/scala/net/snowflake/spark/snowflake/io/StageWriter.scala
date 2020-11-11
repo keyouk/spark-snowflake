@@ -576,7 +576,6 @@ private[io] object StageWriter {
         // send telemetry message
         SnowflakeTelemetry.sendQueryStatus(conn,
           TelemetryConstValues.OPERATION_WRITE,
-          lastStatement.toString,
           lastStatement.getLastQueryID(),
           TelemetryConstValues.STATUS_FAIL,
           end - start,
